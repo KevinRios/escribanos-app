@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nómina de Escribanos CECBA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <h1>Nómina de Escribanos</h1>
+        
+        <div class="search-section">
+            <h3>Búsqueda</h3>
+            <form id="searchForm" class="search-box">
+                <input type="text" 
+                       id="cuit" 
+                       name="cuit" 
+                       class="search-input" 
+                       placeholder="Ingrese 11 dígitos"
+                       maxlength="11">
+                <button type="submit" class="btn btn-secondary">Buscar</button>
+                <div id="validation-message" class="alert alert-warning mt-2" style="display: none;">
+                    Debe ingresar 11 dígitos, solo números
+                </div>
+            </form>
+        </div>
+        
+        <div class="result-section">
+            <h3>Resultado</h3>
+            <div id="result" style="display: none;">
+                <div class="result-content">
+                    <div id="photo-container" class="photo-placeholder"></div>
+                    <div class="table-container">
+                        <table id="data-table" class="result-table"></table>
+                    </div>
+                </div>
+            </div>
+            <div id="error-message" class="alert alert-danger" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
